@@ -9,13 +9,15 @@ let timerId = null;
 function startSwitching() {
     timerId = setInterval(() => {
         changeColorBackground.style.backgroundColor = getRandomHexColor();
-        changeColorStart.disabled = true; 
-    }, 1000)
+        }, 1000);
+    document.querySelector('[data-stop]').removeAttribute('disabled');
+            changeColorStart.setAttribute("disabled", true);
 }
 
 function stopSwitching() {
     clearInterval(timerId);
-    changeColorStart.disabled = false;
+    changeColorStart.removeAttribute("disabled");
+    changeColorStop.setAttribute("disabled", true); 
 }
 
 

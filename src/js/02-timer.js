@@ -54,7 +54,11 @@ function startCalculation(ms) {
 
         if (ms <= 0) {
             clearInterval(countInterval);
-            alert("Count has finished!");
+          alert("Count has finished!");
+                  dataDays.textContent = "00";
+        dataHours.textContent = "00";
+        dataMinutes.textContent = "00";
+        dataSeconds.textContent = "00";
         } else {
             ms -= 1000;
         }
